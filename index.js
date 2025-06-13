@@ -11,7 +11,9 @@ const port = process.env.port || 5000
 
 app.use(cors({
     credentials: true,
-     origin: '*'
+     origin: ['http://localhost:5173',
+        'https://car-doctor-7d3e5.web.app',
+       'https://car-doctor-7d3e5.firebaseapp.com']
 }))
 app.use(express.json())
 app.use(cookieParser())
